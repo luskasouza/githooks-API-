@@ -1,0 +1,26 @@
+/* eslint-disable no-template-curly-in-string */
+import React, { useState, useEffect } from "react";
+
+
+export default function App() {
+  const [repositories, setRepositories] = useState([]);
+  const [localion, setLocation] = useState({});
+
+  useEffect(() => {
+    navigator.geolocation.watchPosition()
+  }, []);
+
+  function handlePositionReceived(coordinates) {
+    console.log(coordinates);
+  }
+
+  return (
+    <>
+      Lalitude: 43.333 <b />
+
+
+      Logitude: 121212
+    </>
+  );
+
+}
